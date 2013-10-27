@@ -42,6 +42,10 @@
 
 ;;; Code
 
+(require 'mozc)
+
+(defvar mozc-cursor-color-version "0.1.0")
+
 (defvar mozc-cursor-color-conflicts-list
   '(ac-completing))
 
