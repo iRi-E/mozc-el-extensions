@@ -36,6 +36,10 @@
 
 ;; History:
 ;; 2013-10-27  S. Irie
+;;         * Minor fixes
+;;         * Version 0.1.1
+;;
+;; 2013-10-27  S. Irie
 ;;         * Initial release
 ;;         * Version 0.1.0
 
@@ -44,7 +48,7 @@
 
 (require 'mozc)
 
-(defvar mozc-cursor-color-version "0.1.0")
+(defvar mozc-cursor-color-version "0.1.1")
 
 (defvar mozc-cursor-color-conflicts-list
   '(ac-completing))
