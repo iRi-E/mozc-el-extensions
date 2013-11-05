@@ -70,7 +70,7 @@
 
 (defadvice isearch-process-search-multibyte-characters
   (around mozc-isearch-process-search-characters () activate)
-  (if (and (string= current-input-method "japanese-mozc")
+  (if (and (equal current-input-method "japanese-mozc")
 	   (eq this-command 'isearch-printing-char))
       (let ((mozc-mode-in-minibuffer mozc-mode)
 	    str)
@@ -106,7 +106,7 @@
 ;; Workaround for bug in mozc.el
 
 (defun mozc-mode-activate ()
-  (if (string= current-input-method "japanese-mozc")
+  (if (equal current-input-method "japanese-mozc")
       (mozc-mode 1)))
 
 (add-hook 'minibuffer-setup-hook 'mozc-mode-activate)
