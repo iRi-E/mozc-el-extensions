@@ -103,8 +103,11 @@
 			mozc-cursor-color-alist))
 	     (frame-parameter nil 'foreground-color))))
     (error
+     (message "error in mozc-cursor-color-update(): %S" err)
+     (set-cursor-color (frame-parameter nil 'foreground-color))
      (mozc-cursor-color-setup-timer t)
-     (remove-hook 'post-command-hook 'mozc-cursor-color-update))))
+     (remove-hook 'post-command-hook 'mozc-cursor-color-update)
+     (message "mozc-cursor-color was disabled due to the error.  See \"*Messages*\" buffer."))))
 
 (defun mozc-cursor-color-setup ()
   (interactive)
