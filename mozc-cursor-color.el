@@ -65,7 +65,7 @@
 (defvar mozc-cursor-color-timer-delay 0.1)
 
 (defvar mozc-current-input-mode 'hiragana)
-(make-variable-buffer-local 'mozc-mode-current-mode)
+(make-variable-buffer-local 'mozc-current-input-mode)
 
 (defadvice mozc-session-execute-command (after mozc-current-input-mode () activate)
   (if ad-return-value
