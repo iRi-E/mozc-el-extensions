@@ -35,6 +35,12 @@
 
 
 ;; History:
+;; 2013-11-05  S. Irie
+;;         * Fix `mozc-current-input-mode' not buffer-local
+;;         * Fix error handler not working properly
+;;         * Fix typo in Commentary
+;;         * Version 0.1.2
+;;
 ;; 2013-10-27  S. Irie
 ;;         * Minor fixes
 ;;         * Version 0.1.1
@@ -48,7 +54,7 @@
 
 (require 'mozc)
 
-(defvar mozc-cursor-color-version "0.1.1")
+(defvar mozc-cursor-color-version "0.1.2")
 
 (defvar mozc-cursor-color-conflicts-list
   '(ac-completing))
