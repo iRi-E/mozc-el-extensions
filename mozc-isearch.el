@@ -34,6 +34,12 @@
 
 
 ;; History:
+;; 2013-11-05  S. Irie
+;;         * `isearch-delete-char' deletes single character from search string
+;;         * Avoid possible error
+;;         * Fix typo in Commentary
+;;         * Version 0.2.0
+;;
 ;; 2013-10-27  S. Irie
 ;;         * Initial release
 ;;         * Version 0.1.0
@@ -43,7 +49,7 @@
 
 (require 'mozc)
 
-(defvar mozc-isearch-version "0.1.0")
+(defvar mozc-isearch-version "0.2.0")
 
 (defvar mozc-preedit-empty-hook nil)
 (defvar mozc-mode-end-hook nil)
