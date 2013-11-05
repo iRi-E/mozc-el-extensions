@@ -17,7 +17,7 @@
 
 ;;; Commentary
 
-;; This progam adds cursor color feature to mozc-mode.
+;; This program adds cursor color feature to mozc-mode.
 
 ;;; Installation
 ;;

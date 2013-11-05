@@ -17,7 +17,7 @@
 
 ;;; Commentary
 
-;; This progam allows you to use mozc-mode for the incremental search.
+;; This program allows you to use mozc-mode for the incremental search.
 
 ;;; Installation
 ;;
