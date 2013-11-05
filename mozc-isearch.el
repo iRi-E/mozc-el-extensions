@@ -89,7 +89,9 @@
 	    (deactivate-input-method))
 	(if (and str (> (length str) 0))
 	    (let ((unread-command-events nil))
-	      (isearch-process-search-string str str))
+	      (dotimes (i (length str))
+		(let ((ch (string (aref str i))))
+		  (isearch-process-search-string ch ch))))
 	  (isearch-update)))
     ad-do-it))
 
