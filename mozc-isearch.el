@@ -51,6 +51,8 @@
 
 (defvar mozc-isearch-version "0.2.0")
 
+(defvar mozc-isearch-use-workaround t)
+
 (defvar mozc-preedit-empty-hook nil)
 (defvar mozc-mode-end-hook nil)
 
@@ -111,11 +113,16 @@
 
 ;; Workaround for bug in mozc.el
 
-(defun mozc-mode-activate ()
-  (if (equal current-input-method "japanese-mozc")
+(defun mozc-mode-ensure-active ()
+  (if (and (equal current-input-method "japanese-mozc")
+	   (not mozc-mode))
       (mozc-mode 1)))
 
-(add-hook 'minibuffer-setup-hook 'mozc-mode-activate)
+(defun mozc-isearch-workaround-setup ()
+  (when mozc-isearch-use-workaround
+    (add-hook 'minibuffer-setup-hook 'mozc-mode-ensure-active)))
+
+(add-hook 'after-init-hook 'mozc-isearch-workaround-setup)
 
 
 (provide 'mozc-isearch)
