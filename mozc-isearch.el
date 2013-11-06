@@ -66,7 +66,7 @@
 	   (boundp 'mozc-preedit-is-empty))
       (setq mozc-preedit-is-empty t)))
 
-(defadvice mozc-mode (after mozc-mode-disabled () activate)
+(defadvice mozc-mode (after mozc-mode-end-hook () activate)
   (if (not mozc-mode)
       (run-hooks 'mozc-mode-end-hook)))
 
