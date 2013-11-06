@@ -34,6 +34,11 @@
 
 
 ;; History:
+;; 2013-11-06  S. Irie
+;;         * Add option `mozc-isearch-use-workaround'
+;;         * Rename some function and advice
+;;         * Version 0.3.0
+;;
 ;; 2013-11-05  S. Irie
 ;;         * `isearch-delete-char' deletes single character from search string
 ;;         * Avoid possible error
@@ -49,7 +54,7 @@
 
 (require 'mozc)
 
-(defvar mozc-isearch-version "0.2.0")
+(defvar mozc-isearch-version "0.3.0")
 
 (defvar mozc-isearch-use-workaround t)
 
